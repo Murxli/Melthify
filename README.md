@@ -12,6 +12,15 @@
   <li>Healthcare Analytics: Create a predictive model using machine learning algorithms that can detect potential diseases or health risks in patients by analyzing medical records and other health-related data.</li>
 </ul>
 
+<h2>Tracks</h2>
+<ol>
+  <li>Fintech and De-Fi</li>
+  <li>Ed-Tech</li>
+  <li>Utility and Life-tech</li>
+  <li>Healthcare</li>
+  <li>Web 3.0</li>
+</ol>
+
 <h2>Judging Criteria</h2>
 <p>Projects will be evaluated based on the following criteria:</p>
 <ul>
