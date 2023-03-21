@@ -19,6 +19,9 @@
   <li>Utility and Life-tech</li>
   <li>Healthcare</li>
   <li>Web 3.0</li>
+  <li>Agriculture</li>
+  <li>Cybersecurity</li>
+  <li>Quantum Computing</li>
 </ol>
 
 <h2>Judging Criteria</h2>
