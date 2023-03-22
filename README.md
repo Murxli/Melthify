@@ -48,14 +48,10 @@
 
 <br>
 <h3>Shortlisted teams will be notified by April 1st, 2023</h3>
-<p>The shortlisted teams should work on implementing the proposed solution and submit the initial work folowing the <a href="#sb">Submission Guidelines</a> by April 8th, 2023 11:59 PM IST</p>
-<p>After the initial submission, the teams will be given inputs and feedback from the judging panel by April 9th, 2023 11:59 PM and will be given 24 hours to implement the changes and submit the final work by April 10th, 2023 11:59 PM IST</p>
-<p>The shortlisted teams are requested to attend the award ceremony on April 12th, 2023 9:00 AM IST</p>
-<h3>Venue </h3>
-Mode : In-Person
-<br>
-Location : <a href="https://maps.app.goo.gl/s4mZjSBpAgtZ7vBN8">SSN College of Engineering, Kalavakkam, Chennai, Tamil Nadu 603110</a>
-<br>
+<p>The shortlisted teams should work on implementing the proposed solution and submit the initial work folowing the <a href="#sb">Submission Guidelines</a> by <strong>April 8th, 2023 11:59 PM IST</strong></p>
+<p>After the initial submission, the teams will be given inputs and feedback from the judging panel by <strong>April 9th, 2023 11:59 PM</strong> and will be given 24 hours to implement the changes and submit the final work by <strong>April 10th, 2023 11:59 PM IST</strong></p>
+<p>The shortlisted teams are requested to attend the award ceremony on <strong>April 12th, 2023 9:00 AM IST</strong> at <a href="https://maps.app.goo.gl/s4mZjSBpAgtZ7vBN8">SSN College of Engineering, Kalavakkam, Chennai</a></p>
+
 
 <h2>Judging Criteria</h2>
 <p>Projects will be evaluated based on the following criteria:</p>
