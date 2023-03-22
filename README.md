@@ -44,6 +44,8 @@
         <td>March 31st, 2023</td>
     </tr>
 </table>
+<strong>Note: <a href="https://github.com/SSNACM/SSN-ACM-10th-Anniversary/blob/main/Abstract%20Submission%20Format.docx">Abstract Submission Format</a> </strong>
+
 <br>
 <h3>Shortlisted teams will be notified by April 1st, 2023</h3>
 <p>The shortlisted teams should work on implementing the proposed solution and submit the initial work folowing the <a href="#sb">Submission Guidelines</a> by April 8th, 2023 11:59 PM IST</p>
