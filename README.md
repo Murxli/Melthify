@@ -24,7 +24,7 @@
   <li>Quantum Computing</li>
 </ol>
 
-<strong>Note to the Participants : Only SOFTWARE projects that fall in the aforementioned tracks will be accepted</strong>
+<strong>Note to the Participants : <ul><li>Only SOFTWARE projects that fall in the aforementioned tracks will be accepted</li><li>Team Size: 2 - 4</li></ul></strong>
 
 <h2 id="tm">Timeline</h2>
 <table>
@@ -76,7 +76,7 @@ Location : <a href="https://maps.app.goo.gl/s4mZjSBpAgtZ7vBN8">SSN College of En
   <li>Fill the Google Form mentioned in the <a href="#tm">Timeline Section</a> section to submit your project.</li>
 </ol>
 
-<p>We encourage participants to be as creative and innovative as possible. You may choose to work in a team or individually.</p>
+<p></p>
 
 <h2>Resources</h2>
 <p>Participants are free to use any programming language, platform, or tools of their choice.</p>
