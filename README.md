@@ -81,3 +81,16 @@
 
 
 <strong><p>Wishing you all the best and happy hacking! Let's see some amazing projects.</p></strong>
+
+
+<h2>Organizers</h2>
+<h2>Student Co-ordinators</h2>
+
+<table style="width:75%">
+	<tr><td><a href="https://jeeveshkrishna.com">Jeevesh Krishna Arigala</a></td><td><a href="https://www.linkedin.com/in/sarath-donepudi/">Sarath Donepudi</a></td></tr>
+	<tr><td><a href="https://www.linkedin.com/in/nandakishorv/">Nandakishor Velu</a></td><td><a href="https://www.linkedin.com/in/sarika-esackimuthu-a552051b4">Sarika Esackimuthu</a></td></tr>
+	<tr><td><a href="https://www.linkedin.com/in/nila-sureshkumar-175651258">Nila Sureshkumar</a></td><td><a href="https://www.linkedin.com/in/gayathrigl">Gayathri G L</a></td></tr>
+	<tr><td><a href="https://www.linkedin.com/in/vignesh-balaji-saravanarajan-397713200">Vignesh Balaji S</a></td><td><a href="https://www.linkedin.com/mwlite/in/danish-sharma-b939671b6">Danish Sharma</a></td></tr>
+	
+</table>
+
