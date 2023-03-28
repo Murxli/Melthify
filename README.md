@@ -36,7 +36,7 @@
     <tr>
         <td>Registration</td>
         <td><a href="https://forms.gle/6ML8HFG4eHNVy5Fs7">Register Here</a></td>
-        <td>March 27th, 2023</td>
+        <td>March 31st, 2023</td>
     </tr>
     <tr>
         <td>Abstract Submission</td>
