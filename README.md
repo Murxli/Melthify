@@ -36,12 +36,12 @@
     <tr>
         <td>Registration</td>
         <td><a href="https://forms.gle/6ML8HFG4eHNVy5Fs7">Register Here</a></td>
-        <td>April 5th, 2023</td>
+        <td>April 6th, 2023</td>
     </tr>
     <tr>
         <td>Abstract Submission</td>
         <td><a href="https://forms.gle/Cc6jxjwFBZKwkD3w9">Submit Your Abstract Here</a></td>
-        <td>April 5th, 2023</td>
+        <td>April 6th, 2023</td>
     </tr>
 </table>
 <strong>Note: <a href="https://github.com/SSNACM/SSN-ACM-10th-Anniversary/blob/main/Abstract%20Submission%20Format.docx">Abstract Submission Format</a> </strong>
