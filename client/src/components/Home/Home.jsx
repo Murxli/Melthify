@@ -4,6 +4,9 @@ import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 
+import cardimg1 from './../../assets/card1.jpg'
+import cardimg2 from './../../assets/card2.jpg'
+
 const Home = () => {
     const {currentUser, logout} = useAuth();
     const Navigate = useNavigate();
@@ -25,10 +28,10 @@ const Home = () => {
             </form>
             <div className="flex w-4/5 mx-auto justify-center gap-20 item-center">
                 <Link to='/chat'>
-                    <Icon imageUrl={'https://via.placeholder.com/200x200'} title={'chatgpt'}/>
+                    <Icon imageUrl={cardimg1} title={'chatgpt'}/>
                 </Link>
                 <Link to='/consult'>
-                    <Icon imageUrl={'https://via.placeholder.com/200x200'} title={'meet with doctor'}/>
+                    <Icon imageUrl={cardimg2} title={'meet with doctor'}/>
                 </Link>
             </div>
         </div>

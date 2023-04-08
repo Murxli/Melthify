@@ -9,6 +9,8 @@ import About from "./About";
 import Services from './services'
 import { Link } from "react-router-dom";
 
+import img1 from '../../assets/bg1.png';
+import img2 from '../../assets/1.png';
 const Landing = () => {
   return (
     <>
@@ -32,7 +34,7 @@ const Landing = () => {
               </Link>
             </motion.div>
             <motion.div variants={slideIn('up', 'spring',0.2,2)} className="hero-img">
-              <img src="" alt="img" />
+              <img src={img2} alt="img" />
             </motion.div>
           </motion.section>
           

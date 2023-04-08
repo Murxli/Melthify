@@ -81,9 +81,16 @@ h2.heading{
     
 }
 
+#why-us{
+    background-image: url('../../assets/bg1.png');
+}
+
 #why-us div {
+    backdrop-filter: blur(30px);
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    align-items: center;
 }
 
 footer{
