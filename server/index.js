@@ -1,27 +1,43 @@
-import dotenv from "dotenv";
-
+const { Configuration, OpenAIApi } = require("openai");
+const express = require('express')
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const dotenv = require('dotenv');
 dotenv.config();
 
-import { Configuration, OpenAIApi } from "openai"
-import readline from "readline"
+const configuration = new Configuration({
+    apiKey: process.env.API_KEY
+});
+const openai = new OpenAIApi(configuration);
 
-const openAi = new OpenAIApi(
-    new Configuration({
-    apiKey: process.env.API_KEY,
+
+const app = express();
+app.use(bodyParser.json());
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
+const port = 3080;
+
+app.post('/', async(req,res) => {
+    const {prompt} = req.body;
+    // console.log(message);
+    const response = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: `${prompt}`,
+        max_tokens: 64,
+        temperature: 1,
+        top_p: 1,
+        n: 1,
+        // stream: false,
+        // logprobs: null,
+        // stop: "\n",
+    });
+    console.log(response.data.choices[0].text);
+    res.json({
+        data : response.data.choices[0].text
     })
-)
-
-const userInterface = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
 })
 
-userInterface.prompt()
-userInterface.on("line", async input => {
-    const response = await openAi.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: input }],
-    })
-    console.log(response.data.choices[0].message.content)
-    userInterface.prompt()
+app.listen(port, ()=>{
+    console.log('app started');
 })
