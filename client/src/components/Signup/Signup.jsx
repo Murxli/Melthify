@@ -1,18 +1,31 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
 
 import { slideIn } from "../../utils/motion";
 import { staggerContainer } from "../../utils/motion";
 import Navbar from "../Navigation/Navbar";
 
 
+import { useAuth } from "../../contexts/AuthContext";
+
 const Signup = () => {
+  const {signupWithEP, signInWithGoogle, currentUser} = useAuth();
+  const Navigate = useNavigate();
+  const [error, setError] = useState("")
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
     password: "",
   });
+
+  useEffect(()=>{
+    console.log(currentUser);
+      if(currentUser){
+        Navigate('/app');
+      }
+  }, [])
 
   const [loading, setLoading] = useState(false);
 
@@ -26,11 +39,35 @@ const Signup = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     setLoading(true);
+    console.log(e);
+    try {
+      await signupWithEP(form.email, form.password);
+      setForm({
+        name: "",
+        email: "",
+        password: "",
+      });
+      Navigate('/login')
+
+    ;
+    } catch (error) {
+      setError('failed to create account')
+      console.log(error);
+    }
     
   };
+
+  const handleSignupWithGoogle = async(event) =>{
+    console.log(event);
+    event.preventDefault();
+    await signInWithGoogle();
+    Navigate('/app')
+
+    
+  }
 
   return (
 
@@ -52,10 +89,11 @@ const Signup = () => {
             className=' bg-black-100 p-8 rounded-2xl'
             style={{width:'70%'}}
           >
+            {error && <p className='text-white' >{error}</p>}
             <form
               ref={formRef}
               onSubmit={handleSubmit}
-              className='flex flex-col w-full gap-8'
+              className='flex flex-col w-full gap-8 mb-4'
             >   
                 <div className="flex flex-col w-full gap-6">
                     <div className="flex items-center">
@@ -96,15 +134,18 @@ const Signup = () => {
                             className="w-4/5 h-8 py-2 px-6 rounded-lg"
                         />
                     </div>
-                    <button className="rounded">Login</button>
+                    <button className="rounded">Signup</button>
                 </div>
 
-                <div className="socialProfiles">
-
-                </div>
+                
                 
             </form>
-            <p className="text-sm p-4">Don't have an account? <span><a href="/signup"> sign up instead</a></span> </p>
+            <div className="socialProfiles">
+                    <form onSubmit={handleSignupWithGoogle}>
+                      <button className="bg-transparent w-full rounded"><i className="fa-brands fa-google"></i> signup with google</button>
+                    </form>
+            </div>
+            <p className="text-sm p-4">Have an account? <span><a href="/login"> login instead</a></span> </p>
           </motion.div>
         </div>
       </motion.section>

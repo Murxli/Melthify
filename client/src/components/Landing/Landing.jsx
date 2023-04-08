@@ -7,6 +7,7 @@ import { staggerContainer } from "../../utils/motion";
 import Navbar from "../Navigation/Navbar";
 import About from "./About";
 import Services from './services'
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -26,7 +27,9 @@ const Landing = () => {
                 AI Chatbot System and Teleconsultation Platform for mental and emotional
                 well-being
               </p>
-              <button>Get Started</button>
+              <Link to='/signup'>
+                <button className="text-white">Get Started</button>
+              </Link>
             </motion.div>
             <motion.div variants={slideIn('up', 'spring',0.2,2)} className="hero-img">
               <img src="" alt="img" />

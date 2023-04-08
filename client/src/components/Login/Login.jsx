@@ -1,21 +1,33 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import { useNavigate } from 'react-router-dom';
 
 import { slideIn } from "../../utils/motion";
 import { staggerContainer } from "../../utils/motion";
 import Navbar from "../Navigation/Navbar";
 
+import { useAuth } from "../../contexts/AuthContext";
+
 
 const Login = () => {
+  const {currentUser, loginWithEP, signInWithGoogle} = useAuth();
+  const Navigate = useNavigate();
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
     password: "",
   });
-
+  const [error, setError] = useState("")
   const [loading, setLoading] = useState(false);
+
+  useEffect(()=>{
+    console.log(currentUser);
+      if(currentUser){
+        Navigate('/app');
+      }
+  }, [])
 
   const handleChange = (e) => {
     const { target } = e;
@@ -27,11 +39,31 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     setLoading(true);
-    
-  };
+    try {
+      await loginWithEP(form.email, form.password);
+      setForm({
+        name: "",
+        email: "",
+        password: "",
+      });
+      Navigate('/app')
+      
+    ;
+    } catch (error) {
+      setError('failed to login')
+      console.log(error);
+  }}
+
+  const handleSignInWithGoogle = async(event) =>{
+    console.log(event);
+    event.preventDefault();
+    await signInWithGoogle();
+    Navigate('/app')
+
+  }
 
   return (
 
@@ -53,6 +85,7 @@ const Login = () => {
             className=' bg-black-100 p-8 rounded-2xl'
             style={{width:'70%'}}
           >
+            {error && <p className='text-red p-10' >{error}</p>}
             <form
               ref={formRef}
               onSubmit={handleSubmit}
@@ -89,9 +122,9 @@ const Login = () => {
                 </div>
             </form>
             <div className="socialProfiles">
-                    <form action="">
-                      <button className="bg-transparent w-full rounded"><i class="fa-brands fa-google"></i> Login with google</button>
-                    </form>
+              <form onSubmit={handleSignInWithGoogle}>
+                <button className="bg-transparent w-full rounded"><i className="fa-brands fa-google"></i> Login with google</button>
+              </form>
             </div>
             <p className="text-sm p-4">Don't have an account? <span><a href="/signup"> sign up instead</a></span> </p>
           </motion.div>

@@ -8,10 +8,7 @@ const Navbar = (props) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (props.page === 'contact') {
-      setActive('contact');
-    }
-    console.log(props);
+    setActive(props.page);
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       if (scrollTop > 40) {
