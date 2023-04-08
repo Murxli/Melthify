@@ -1,0 +1,36 @@
+.navbar{
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 600;
+    /* min-width: 48px; */
+    font-size: 1.2rem;
+    position: sticky;
+    padding: 1rem;
+
+}
+
+.logo{
+    font-size: 1.3rem;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 40%;
+}
+
+.nav-items a{
+    color: white;
+}
+
+button a{
+    padding: 0 0.7rem 0.2rem 0.7rem;
+    color: white;
+}
+
+button a:hover{
+    color: white;
+}

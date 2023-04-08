@@ -1,0 +1,11 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+
+}
+
+.App{
+  max-width: 1064px;
+  margin: 0 auto;
+}
