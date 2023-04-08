@@ -1,3 +1,7 @@
+.landing h2{
+    font-size: 3rem;
+}
+
 section{
     height: 100vh;
     width: 100%;
@@ -11,8 +15,10 @@ section{
     height: 80vh;
     justify-content: space-between;
 }
+
+
 .hero .content{
-    width: 50%;
+    width: 60%;
     padding: 4rem;
 }
 
@@ -21,6 +27,13 @@ section{
     padding: 1rem;
     width: 70%;
     font-size: 1.2rem;
+}
+
+.content h1{
+    font-weight: 800;
+    font-size: 3rem;
+    text-align: left;
+    margin: 2rem 0;
 }
 
 .hero button:hover{
@@ -39,23 +52,23 @@ section{
     border: 1px solid blueviolet;
 }
 
-.about h2 {
-    font-size: 1.6rem;
-    font-weight: 800;
-    padding: 3rem 0;
-}
+
 #about p {
     font-size: 1.2rem;
 }
 
 #services{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#services h2.heading{
+h2.heading{
     padding: 2rem;
     font-size: 2rem;
     font-weight: 800;
+    line-height: 1.1;
 }
 
 #services ul{
@@ -67,7 +80,7 @@ section{
     
 }
 
-#why-us {
+#why-us div {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }

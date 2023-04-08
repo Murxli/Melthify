@@ -26,14 +26,14 @@
 
 
 .logo{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .nav-items{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-width: 40%;
+    justify-content: space-evenly;
+    min-width: 50%;
 }
 
 .nav-items a{
@@ -76,4 +76,8 @@ button a{
 
 p{
   margin: 0;
+}
+
+.clicked a{
+  color: #2b2453;
 }

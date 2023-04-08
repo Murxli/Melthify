@@ -2,12 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Navbar.css";
-const Navbar = () => {
+const Navbar = (props) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if (props.page === 'contact') {
+      setActive('contact');
+    }
+    console.log(props);
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       if (scrollTop > 40) {
@@ -37,49 +41,49 @@ const Navbar = () => {
             <li
             className={`${
                 active === 
-                "about" ? "text-white" : "text-secondary"
+                "About" ? "clicked" : ""
             }`}
+            style={{display : active==='contact'?'none':'' }}
             onClick={() => {
                 setToggle(!toggle);
                 setActive("About");
             }}
             >
-            <a href="#about">About</a>
+            <a href="/#about">About</a>
             </li>
             <li
             className={`${
-                active === "Our-Services" ? "text-white" : "text-secondary"
+                active === "Our-Services" ? "clicked" : "text-secondary"
             }`}
+            style={{display : active==='contact'?'none':'block' }}
             onClick={() => {
                 setToggle(!toggle);
                 setActive("Our-Services");
             }}
             >
-            <a href="#services">Our Services</a>
+            <a href="/#services">Our Services</a>
             </li>
             <li
             className={`${
                 active === 
-                "whyus" ? "text-white" : "text-secondary"
+                "why-us" ? "clicked" : "text-secondary"
             }`}
             onClick={() => {
                 setToggle(!toggle);
                 setActive("why-us");
             }}
+            style={{display : active==='contact'?'none':'block' }}
             >
-            <a href="#why-us">Why us?</a>
+            <a href="/#why-us">Why us?</a>
             </li>
-            <li
-            className={`${
-                active === 
-                "contact" ? "text-white" : "text-secondary"
-            }`}
-            onClick={() => {
-                setToggle(!toggle);
-                setActive("contact");
-            }}
-            >
-            <a href="/contact">Contact Us</a>
+            <li  className={`${
+                  active === 
+                  "contact" ? "contact" : "text-secondary"
+              }`}>
+                <a href="/contact" onClick={() => {
+                  setToggle(!toggle);
+                  setActive("contact");
+                  }}>Contact Us</a>
             </li>
         </ul>
         <button>

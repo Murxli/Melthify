@@ -6,7 +6,8 @@ export default {
   ],
   theme: {
     colors: {
-
+      primary:"#646cff",
+      primary500: "rgba(43,36,83,0.7)",
     },
     extend: {},
   },
