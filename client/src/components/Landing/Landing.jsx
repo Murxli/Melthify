@@ -8,12 +8,13 @@ const Landing = () =>{
             <div className='content'>
                 <h1>Health infrastructre in the internet</h1>
                 <p>AI Chatbot System and Teleconsultation Platform for emotional well-being</p>
+                <button>Get Started</button>
             </div>
             <div className='hero-img'>
                 <img src="" alt="img" />
             </div>
         </section>
-        <section className='about'>
+        <section id='about'>
             <div className='content'>
             <h2>
                 <span>The Future of Mental Health Support : </span>
@@ -24,26 +25,43 @@ const Landing = () =>{
             </p>
             </div>
         </section>
-        <section className='services'>
+        <section id='services'>
+            <h2 className='heading'>Our Services</h2>
              <ul>
                 <li>
-                <Card
-      coverImage="https://via.placeholder.com/300x200"
-      title="The Power of Positive Thinking"
-      subtitle="How optimism can improve your life"
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae justo eu enim consectetur interdum vel ut purus. Aliquam condimentum bibendum est, sed venenatis massa vestibulum id. Nulla facilisi. Sed consequat purus id dapibus convallis."
-      authorAvatar="https://images.unsplash.com/photo-1541544717335-5a810fda9665"
-      authorName="John Doe"
-    />
-                    {/* <Card title="Chatbot" text="Our AI-powered chatbot is trained to understand your unique needs and preferences. It can offer tailored support, suggest resources, and provide tips and techniques to help you manage your mental health."/>
-                    <h2>Chatbot</h2>
-                    <p> </p> */}
+                    <Card
+                        coverImage="https://via.placeholder.com/300x200"
+                        title="AI-powered chatbot"
+                        text="Our AI-powered chatbot is trained to understand your unique needs and preferences. It can offer tailored support, suggest resources, and provide tips and techniques to help you manage your mental health."
+                    />
                 </li>
                 <li>
-                    <h2>Teleconsultation</h2>
+                    <Card
+                        coverImage="https://via.placeholder.com/300x200"
+                        title=" Teleconsulting"
+                        text="Connect with a licensed psychiatrist via video chat, or messaging. Teleconsulting is a convenient and accessible option for those with busy schedules or limited mobility. Book your appointment today and take the first step towards better mental health."
+                    />
                 </li>
              </ul>
         </section>
+        <section id='why-us'>
+            <h2>Why Melthify?</h2>
+            <p>
+            Our AI chatbot uses advanced technology to understand your unique needs and provide personalized guidance. Our licensed mental health professionals offer compassionate and evidence-based care to help you achieve your mental health goals. We take your privacy seriously and use industry-standard encryption and strict privacy policies to protect your data. And our goal is to help you live a happier, healthier life, with thousands of satisfied users who have improved their mental health with Melthify.
+            </p>
+        </section>
+        <footer>
+            <div>
+                <a href="/" className='logo'>melthify</a>
+            </div>
+            <div>
+                <p>Made by: </p>
+                <p><a href="">Paari</a></p>
+                <p><a href=""> Mona Abishek</a></p>
+                <p><a href="">Muralikrishna</a></p>
+            </div>
+
+        </footer>
     </div>
     )
 }

@@ -1,15 +1,29 @@
+.navbar-container{
+  width: 100%;
+  height: fit-content;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 20;
+
+
+}
+
 .navbar{
     display: flex;
     place-items: center;
     justify-content: space-between;
     width: 100%;
     font-weight: 600;
-    /* min-width: 48px; */
     font-size: 1.2rem;
-    position: sticky;
     padding: 1rem;
+    max-width: 1064px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 
 }
+
 
 .logo{
     font-size: 1.3rem;
@@ -26,11 +40,40 @@
     color: white;
 }
 
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #646cff;
+}
+
+nav.stroke ul li a{
+  position: relative;
+}
+
+nav.stroke ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
 button a{
     padding: 0 0.7rem 0.2rem 0.7rem;
     color: white;
 }
 
-button a:hover{
-    color: white;
+p{
+  margin: 0;
 }

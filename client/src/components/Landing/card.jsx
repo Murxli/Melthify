@@ -3,10 +3,14 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const CardWrapper = styled(motion.div)`
+  padding:1rem;
   display: flex;
   flex-direction: column;
-  width: 350px;
-  height: 500px;
+  width: 300px;
+  height: 90%;
+  margin:0 auto;
+  background: linear-gradient(to bottom right, #bdc3c7, #ecf0f1);
+  border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   &:hover {
     cursor: pointer;
@@ -20,7 +24,7 @@ const CardImage = styled.img`
 `;
 
 const CardTitle = styled.h2`
-  font-size: 28px;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 10px 0;
 `;
@@ -30,35 +34,13 @@ const CardDivider = styled.hr`
   margin: 10px 0;
 `;
 
-const CardSubtitle = styled.h3`
-  font-size: 22px;
-  font-weight: bold;
-  margin: 10px 0;
-`;
 
 const CardText = styled.p`
-  font-size: 18px;
+  font-size: 0.8 rem;
   line-height: 1.5;
   margin: 10px 0;
 `;
 
-const CardAuthorWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: auto;
-`;
-
-const CardAuthorAvatar = styled.img`
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-`;
-
-const CardAuthorName = styled.span`
-  font-size: 16px;
-  font-weight: bold;
-`;
 
 const Card = ({
   coverImage,
@@ -70,9 +52,10 @@ const Card = ({
 }) => {
 
     const hoverAnimation = {
-        rotateX: [0, 5, 0, -5, 0],
-        rotateY: [0, 5, 0, -5, 0],
-        rotateZ: [0, 3, 0, -3, 0],
+        scale: 1.03,
+        rotateX: 0,
+        rotateY: 0,
+        rotateZ: 0,
         transition: { duration: 0.3 },
         perspective: "1000px",
         whileHover: {
@@ -114,16 +97,20 @@ const Card = ({
         },
       };
   return (
-    <CardWrapper whileHover={hoverAnimation}>
-      <CardImage src={coverImage} alt={title} />
-      <CardTitle>{title}</CardTitle>
-      <CardDivider />
-      {/* <CardSubtitle>{subtitle}</CardSubtitle> */}
-      <CardText>{text}</CardText>
-      {/* <CardAuthorWrapper>
-        <CardAuthorAvatar src={authorAvatar} alt={authorName} />
-        <CardAuthorName>{authorName}</CardAuthorName>
-      </CardAuthorWrapper> */}
+    <CardWrapper 
+      whileHover={hoverAnimation}
+      initial={{ opacity: 0, y: 50, perspective: "1000px", rotateX: 0, rotateY: 0, rotateZ: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}>
+        <div style={{backdropFilter:'blur(10px)', backgroundColor:'black', height:'100%', color:'white', borderRadius:'10px'}}>
+          <CardImage src={coverImage} alt={title} />
+          <div style={{padding:"1rem"}}>
+            <CardTitle>{title}</CardTitle>
+            <CardDivider />
+            <CardText>{text}</CardText>
+          </div>
+        </div>
+     
     </CardWrapper>
   );
 };

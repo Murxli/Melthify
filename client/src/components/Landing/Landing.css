@@ -3,16 +3,35 @@ section{
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 2rem;
+    /* padding: 2rem; */
 }
 .hero{
+    position: relative;
+    top: 10vh;
     height: 80vh;
     justify-content: space-between;
 }
 .hero .content{
     width: 50%;
-    padding: 3rem;
+    padding: 4rem;
 }
+
+.hero button{
+    margin: 1rem;
+    padding: 1rem;
+    width: 70%;
+    font-size: 1.2rem;
+}
+
+.hero button:hover{
+    background-color: #9094e2;
+    color:#0c062f;
+}
+
+.hero button a{
+    font-size: 1.5rem;
+}
+
 
 .hero-img{
     width: 45%;
@@ -25,13 +44,43 @@ section{
     font-weight: 800;
     padding: 3rem 0;
 }
-.about p {
+#about p {
     font-size: 1.2rem;
 }
 
-.services ul{
+#services{
+    display: block;
+}
+
+#services h2.heading{
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#services ul{
+    padding: 2rem;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    
+}
+
+#why-us {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+footer{
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 800;
 }
