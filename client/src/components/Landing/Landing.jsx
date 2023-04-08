@@ -27,7 +27,7 @@ const Landing = () => {
                 AI Chatbot System and Teleconsultation Platform for mental and emotional
                 well-being
               </p>
-              <Link to='/signup'>
+              <Link to='/login'>
                 <button className="text-white">Get Started</button>
               </Link>
             </motion.div>

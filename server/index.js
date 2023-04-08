@@ -12,30 +12,38 @@ const openai = new OpenAIApi(configuration);
 
 
 const app = express();
-app.use(bodyParser.json());
+
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended:true}))
+
 const port = 3080;
 
 app.post('/', async(req,res) => {
-    const {prompt} = req.body;
-    // console.log(message);
-    const response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: `${prompt}`,
-        max_tokens: 64,
-        temperature: 1,
-        top_p: 1,
-        n: 1,
-        // stream: false,
-        // logprobs: null,
-        // stop: "\n",
-    });
-    console.log(response.data.choices[0].text);
-    res.json({
-        data : response.data.choices[0].text
-    })
+
+    const {form} = req.body;
+    let response;
+    try {
+        response = await openai.createCompletion({
+            model: "text-davinci-003",
+            prompt: `${form}`,
+            max_tokens: 64,
+            temperature: 1,
+            top_p: 1,
+            n: 1,
+        });
+
+        res.json({
+            data : response.data.choices[0].text
+        })
+
+    } catch (error) {
+        console.log(error);
+        response = 'Erooor try again later'
+
+        res.json({
+            data : response
+        })
+    }
 })
 
 app.listen(port, ()=>{

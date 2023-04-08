@@ -68,7 +68,7 @@ const Login = () => {
   return (
 
     <div>
-      <Navbar page={'login'}/>
+      <Navbar page={'auth'}/>
       <motion.section
       variants={staggerContainer()}
       initial='hidden'

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
 
 import "./Navbar.css";
 const Navbar = (props) => {
+  const {currentUser} = useAuth();
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -34,7 +36,7 @@ const Navbar = (props) => {
         >
             <p className="logo">melthify</p>
         </Link>
-        <ul className="nav-items">
+        <ul className="nav-items" style={{display: props.page === 'auth' ? 'none':''}}>
             <li
             className={`${
                 active === 
@@ -83,10 +85,13 @@ const Navbar = (props) => {
                   }}>Contact Us</a>
             </li>
         </ul>
-        <button>
-            <a href="/login">Sign in</a>
-        </button>
-        {/* <button><a href="/app">Dashboard</a></button> */}
+        {!currentUser ? (
+          <button>
+            <a href="/login" style={{display: props.page === 'auth' ? 'none':''}}>Sign in</a>
+          </button>
+        ) : (
+          <button><a href="/app">Dashboard</a></button>
+        )}
         </nav>
     </div>
   );
