@@ -10,6 +10,7 @@ import Signup from './components/Signup/Signup';
 import Home from './components/Home/Home';
 import Chat from './components/Chat/Chat'
 import AuthProvider from './contexts/AuthContext';
+import Consult from './components/Consult/consult';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
 
         <Route path='/chat' element = {<Chat />} />
 
-        <Route path='/consult' element = {<></>} />
+        <Route path='/consult' element = {<Consult/>} />
 
       </Routes>
       </AuthProvider>
