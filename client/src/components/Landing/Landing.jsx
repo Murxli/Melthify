@@ -67,7 +67,7 @@ const Landing = () => {
                 melthify
               </a>
             </div>
-            <div>
+            <div className="flex gap-10">
               <p>Made by: </p>
               <p>
                 <a href="">Paari</a>

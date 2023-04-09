@@ -23,7 +23,7 @@ const Chat = () =>{
         const { target } = e;
         const { name, value } = target;
         setForm(value);
-      };
+    };
 
     const handleSubmit = async(e) =>{
         e.preventDefault();
@@ -43,9 +43,12 @@ const Chat = () =>{
                     'Content-Type' : 'application/json'
                 }
             });
+            var body = await response.json()
             if (response.ok) {
+                console.log(body.data);
+                var res = body.data.trim();
                 const doc = await addDoc(collection(db,'users',currentUser.email,'chats'),{
-                    messages:[form,response],
+                    messages:[form,res],
                     createdAt: Timestamp.now()
                 })
                 setForm('');
@@ -54,6 +57,7 @@ const Chat = () =>{
             }
         } catch (error) {
             setLoading(false);
+            console.log(error);
         }
     }
     return(
