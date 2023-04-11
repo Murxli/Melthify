@@ -10,7 +10,7 @@ import Signup from './components/Signup/Signup';
 import Home from './components/Home/Home';
 import Chat from './components/Chat/Chat'
 import AuthProvider from './contexts/AuthContext';
-import Consult from './components/Consult/consult';
+import Consult from './components/Consult/Consult';
 import Community from './components/Community/community';
 import CChat from './components/Community/CChat';
 
