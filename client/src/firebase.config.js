@@ -5,12 +5,12 @@ import {getAuth} from 'firebase/auth';
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDMvMsJnXyKID0Q2lQOTvmkgyxMqxV71Zg",
+    apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
     authDomain: "melthify.firebaseapp.com",
     projectId: "melthify",
     storageBucket: "melthify.appspot.com",
     messagingSenderId: "135963287106",
-    appId: "1:135963287106:web:aeb9cb67f792b0e14497db",
+    appId: process.env.REACT_APP_FIREBASE_APIKEY,
     measurementId: "G-0JFXDRY1NM"
   };
 
