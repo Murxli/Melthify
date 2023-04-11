@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { zoomIn } from "../../utils/motion";
 import {Tilt} from "react-tilt";
 import { slideIn } from "../../utils/motion";
 
