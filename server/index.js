@@ -1,5 +1,6 @@
 const { Configuration, OpenAIApi } = require("openai");
 const express = require('express')
+const bodyParser = require('body-parser')
 const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -11,26 +12,29 @@ const openai = new OpenAIApi(configuration);
 
 
 const app = express();
-
-app.use(cors());
-app.use(express.json());
-
 const port = 3080;
+
+app.use(bodyParser.json());
+app.use(cors());
+
 
 app.post('/', async(req,res) => {
     const {form} = req.body;
     let response;
     try {
-        response = await openai.createCompletion({
-            model: "text-davinci-003",
-            prompt: form,
-            max_tokens: 1000,
-            temperature: 0.7,
-            top_p: 1,
-            n: 1,
+        response = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages:[
+                {role:"user",content:`Consider yourself as an mental health assistant and answer the following question : ${form}`}
+            ],
+            max_tokens: 150,
+            temperature: 0.1,
+            top_p:1.0,
+            frequency_penalty:1,
+            presence_penalty:1
         });
         res.json({
-            data : response.data.choices[0].text
+            data : response.data.choices[0].message.content
         })
 
     } catch (error) {

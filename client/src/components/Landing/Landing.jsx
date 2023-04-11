@@ -72,13 +72,13 @@ const Landing = () => {
             <div className="flex gap-10 justify-end">
               <p>Made by: </p>
               <p>
-                <a href="">Paari</a>
+                <a href="https://www.linkedin.com/in/paari1263/" target="_blank">Paari</a>
               </p>
               <p>
-                <a href=""> Mona Abishek</a>
+                <a href="https://www.linkedin.com/in/mona-abishek-a-28035b214/" target="_blank"> Mona Abishek</a>
               </p>
               <p>
-                <a href="">Muralikrishna</a>
+                <a href="https://www.linkedin.com/in/murxli/" target="_blank">Muralikrishna</a>
               </p>
             </div>
           </footer>

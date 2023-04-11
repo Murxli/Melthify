@@ -20,9 +20,9 @@ const Threapists = () =>{
                     </h2>
                 </div>
                 <div className="w-full">
-                    <ul>
+                <ul>
                     <li>
-                    <a href="https://calendly.com/programmator898/30min">
+                    <a href="https://calendly.com/melthify/consultation-with-juliane-j-kowski">
                     <Card
                         coverImage={th1}
                         title="juliane J Kowski"
@@ -32,7 +32,7 @@ const Threapists = () =>{
                     </a>
                     </li>
                     <li>
-                    <a href="https://calendly.com/programmator898/30min">
+                    <a href="https://calendly.com/melthify/consultation-with-danny-ei-hassan">
                     <Card
                         animation = "down"
                         coverImage={th2}
@@ -42,7 +42,7 @@ const Threapists = () =>{
                     </a>
                     </li>
                     <li>
-                    <a href="https://calendly.com/programmator898/30min">
+                    <a href="https://calendly.com/melthify/consultation-with-supriya-blair">
                     <Card
                         coverImage={th3}
                         title="Supriya Blair"
