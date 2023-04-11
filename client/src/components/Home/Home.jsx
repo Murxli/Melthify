@@ -4,6 +4,8 @@ import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 
+import NavBar from './../Navigation/Navbar'
+
 import cardimg1 from './../../assets/card1.jpg'
 import cardimg2 from './../../assets/card2.jpg'
 
@@ -23,10 +25,8 @@ const Home = () => {
       }
     return(
         <div className="app">
-            <form onSubmit={handlelogout} className="absolute top-10 right-10">
-                <button className="rounded p-2">Logout</button>
-            </form>
-            <div className="flex w-4/5 mx-auto justify-center gap-20 item-center">
+            <NavBar page='app' onHandleLogout = {handlelogout}/>
+            <div className="grid grid-cols-2 mx-auto justify-center gap-20 item-center max-w-5xl md:">
                 <Link to='/chat'>
                     <Icon imageUrl={cardimg1} title={'chatgpt'}/>
                 </Link>

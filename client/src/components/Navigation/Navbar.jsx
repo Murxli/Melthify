@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
+import logo from '../../assets/logo.png';
 
 import "./Navbar.css";
 const Navbar = (props) => {
@@ -25,7 +26,7 @@ const Navbar = (props) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="navbar-container">
+    <div className="navbar-container fixed top-0 left-0">
         <nav className={`navbar stroke ${scrolled ? 'scrolled' : 'bg-transparent'}`}>
         <Link
             to="/"
@@ -33,10 +34,12 @@ const Navbar = (props) => {
             setActive("");
             window.scrollTo(0, 0);
             }}
+            className="flex items-center"
         >
-            <p className="logo">melthify</p>
+          <img src={logo} alt="logo" className="h-12"/>
+            <p className="logo px-1">melthify</p>
         </Link>
-        <ul className="nav-items" style={{display: props.page === 'auth' ? 'none':''}}>
+        <ul className="nav-items" style={{display: props.page === 'auth' || props.page === 'app' ? 'none':''}}>
             <li
             className={`${
                 active === 
@@ -90,6 +93,10 @@ const Navbar = (props) => {
             <a href="/login" style={{display: props.page === 'auth' ? 'none':''}}>Sign in</a>
           </button>
         ) : (
+          props.page === 'app' ? (
+          <form onSubmit={props.onHandleLogout}>
+            <button className="rounded">Logout</button>
+          </form>)  : 
           <button><a href="/app">Dashboard</a></button>
         )}
         </nav>

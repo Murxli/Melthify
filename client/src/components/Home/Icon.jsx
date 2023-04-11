@@ -5,7 +5,7 @@ const CardWrapper = styled(motion.div)`
   padding:1rem;
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 100%;
   height: 100%;
   background: linear-gradient(to top right, #bdc3c7, rgba(43,36,83,1));
   border-radius: 10px;

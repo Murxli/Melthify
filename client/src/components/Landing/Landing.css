@@ -50,7 +50,6 @@ section{
 .hero-img{
     width: 45%;
     height: 70%;
-    border: 1px solid blueviolet;
 }
 
 
@@ -91,6 +90,10 @@ h2.heading{
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
+}
+
+#why-us p{
+    color: black;
 }
 
 footer{

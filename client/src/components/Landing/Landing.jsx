@@ -8,6 +8,7 @@ import Navbar from "../Navigation/Navbar";
 import About from "./About";
 import Services from './services'
 import { Link } from "react-router-dom";
+import logo from '../../assets/logo.png';
 
 import img1 from '../../assets/bg1.png';
 import img2 from '../../assets/1.png';
@@ -63,11 +64,12 @@ const Landing = () => {
           </motion.section>
           <footer>
             <div>
-              <a href="/" className="logo">
+              <a href="/" className="logo flex items-center">
+                <img src={logo} alt="logo" className="h-12"/>
                 melthify
               </a>
             </div>
-            <div className="flex gap-10">
+            <div className="flex gap-10 justify-end">
               <p>Made by: </p>
               <p>
                 <a href="">Paari</a>
